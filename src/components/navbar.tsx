@@ -15,7 +15,6 @@ export const Navbar = () => {
 
   const handleTabClick = (tab:any) => {
     setSelectedTab(tab.name);
-    // onTabClick(tab.id); 
   };
   return (
     <>
@@ -24,8 +23,8 @@ export const Navbar = () => {
           <img src={bellIcon} alt="bell icon" />
           <img src={chainIcon} alt="chain icon" className="w-20" />
         </div>
-        <div className="font-normal text-sm w-[50%] border-1 border-black h-13 rounded-xl flex items-center px-4 bg-black text-white">
-          <div className="flex space-x-6 items-center cursor-pointer">
+        <div className="font-normal text-sm w-1/2 border-black h-13 rounded-xl flex  items-center px-4 bg-black text-white">
+          <div className="flex space-x-6 w-full items-center justify-between cursor-pointer">
             {tabs.map((tab)=>(
               <a
               href={`#${tab.id}`}
