@@ -9,7 +9,7 @@ import scalable from "../assets/infinitely_scalable.webm";
 export const GridLayout = () => {
   return (
     <div className="grid grid-cols-4 gap-4 p-4 bg-black text-white mt-10">
-      <div className="bg-black border h-[620px] border-white p-4 rounded-4xl col-span-2 row-span-2 flex flex-col items-left">
+      <div className="bg-black border h-[100%] border-white p-4 rounded-4xl col-span-2 row-span-2 flex flex-col items-left">
         <div className="w-full h-full">
           <video
             className="w-full h-full"
