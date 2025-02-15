@@ -1,78 +1,71 @@
 import crypto from "../assets/crypto.webp";
-import arrow from "../assets/arrow.svg";
-import second_hero from "../assets/second-hero.webp";
 
 export const KnowledgeBase = () => {
   return (
-    <>
-      <div className="px-8">
-        <h1 className="font-medium text-5xl">
-          Consumer applications that work from any chain, reach instant
-          finality, and achieve true scalability.
-        </h1>
-        <div className="pt-10 mt-10 flex justify-between">
-          <div className="p-2 pt-10">
-            <div className="flex gap-36">
-              <span>
-                <h2 className="font-bold text-5xl">4MB</h2>
-                <h3 className="font-medium text-xl">Block Size</h3>
-              </span>
-              <span>
-                <h2 className="font-bold text-5xl">1s</h2>
-                <h3 className="font-medium text-xl">Finality</h3>
-              </span>
-            </div>
-            <div className="pt-10 mt-20">
+    <div className="w-full px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-20">
+      {/* Main Title */}
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-[90%] md:max-w-[80%] lg:max-w-[70%] mb-12 md:mb-16">
+        Consumer applications that work from any chain, reach instant finality, and achieve true scalability.
+      </h2>
+
+      {/* Stats and Chain Section */}
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 mb-12">
+        {/* Stats Section */}
+        <div className="flex gap-8 md:gap-16">
+          {/* Block Size */}
+          <div>
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold">4MB</h3>
+            <p className="text-lg md:text-xl mt-2">Block Size</p>
+          </div>
+
+          {/* Finality */}
+          <div>
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold">1s</h3>
+            <p className="text-lg md:text-xl mt-2">Finality</p>
+          </div>
+        </div>
+
+        {/* Supported Chain */}
+        <div className="flex flex-col">
+          <div className="flex gap-2">
+            {/* Replace with your actual chain icons */}
+            <div >
               <img src={crypto} alt="crypto icon" />
               <h3 className="font-medium text-xl">Supported Chain</h3>
             </div>
           </div>
-          <div className="h-fit w-lg px-5 font-light text-2xl">
-            Create shared app experiences, eliminating chain boundaries for your
-            users, allowing them to just simply
-            <b className="font-bold"> use your application</b>
-            <br />
-            <br />
-            Linear scalability and dynamic sharding ensure read and write
-            transactions continue to increase as more nodes are added to the
-            network.
-            <div className="flex gap-10 text-xl font-medium text-[#D548EC] mt-5">
-              <a
-                href="https://simulate.push.org/"
-                target="_blank"
-                className="flex gap-2 items-center"
-              >
-                Simulate Tx
-                <img src={arrow} alt="arrow" className="w-5" />
-              </a>
-              <a href="" className="flex gap-2">
-                Push Scan Devnet
-                <img src={arrow} alt="arrow" className="w-5" />
-              </a>
-            </div>
-            <h3 className="text-lg font-thin w-[80%] text-[#797888]">
-              Universal applications will launch with Testnet. Devnet is live.
-              Try now!
-            </h3>
-          </div>
-        </div>
-
-        <div className="mt-40 flex flex-col items-center">
-          <h3 className="text-5xl text-black text-center w-4xl">
-            A layer 1 built on the foundations from pioneering web3
-            communications.
-          </h3>
-          <img className="mt-20" src={second_hero} alt="second_hero" />
-        <h3 className="mt-20 text-3xl text-black text-center w-4xl font-light">
-          After four years of building the leading notifications protocol and a
-          thriving ecosystem, Push Protocol is evolving to launch and scale Push
-          Chain.
-        </h3>
-        <button className="px-5 py-3 bg-[#D548EC] hover:bg-[#dc7ae9] text-white rounded-xl text-xl mt-4 cursor-pointer">
-            Explore Communications Protocol
-        </button>
+          
         </div>
       </div>
-    </>
+
+      {/* Description Section */}
+      <div className="space-y-8 md:space-y-12 max-w-[90%] md:max-w-[80%] lg:max-w-[60%]">
+        <p className="text-xl md:text-2xl lg:text-3xl">
+          Create shared app experiences, eliminating chain boundaries for your users, allowing them to just simply 
+          <span className="font-bold"> use your application</span>
+        </p>
+
+        <p className="text-xl md:text-2xl lg:text-3xl">
+          Linear scalability and dynamic sharding ensure read and write transactions continue to increase as more nodes are added to the network.
+        </p>
+
+        {/* Links Section */}
+        <div className="space-y-2">
+          <div className="flex flex-col sm:flex-row gap-4 text-[#D548EC]">
+            <a href="#" className="text-lg md:text-xl hover:underline flex items-center gap-2">
+              Simulate Tx
+              <span className="transform rotate-45">→</span>
+            </a>
+            <a href="#" className="text-lg md:text-xl hover:underline flex items-center gap-2">
+              Push Scan Devnet
+              <span className="transform rotate-45">→</span>
+            </a>
+          </div>
+          <p className="text-gray-600 text-sm md:text-base">
+            Universal applications will launch with Testnet. Devnet is live. Try now!
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };

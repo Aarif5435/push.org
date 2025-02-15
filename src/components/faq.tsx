@@ -31,7 +31,7 @@ Push Chain also introduces several key innovations in web3. At launch, these inc
     id: 3,
     question: "Why is Push Chain unique for users?",
     answer: `Push Chain addresses specific gaps in the existing blockchains, such as interoperability, shared app experiences, enabling new app experiences, and scalability. While existing blockchains are robust, they operate in their own eco-system and an aggregator to unite these chains are needed.
-Push Chain’s focus is on being a shared state chain for universal applications acting as a unifying layer where all chains can come together and use PC as universal hub or do settlement between them.`,
+Push Chain's focus is on being a shared state chain for universal applications acting as a unifying layer where all chains can come together and use PC as universal hub or do settlement between them.`,
     isOpen: false,
   },
   {
@@ -63,9 +63,9 @@ export const FAQ = () => {
 
   return (
     <>
-      <div className="p-40 mt-20 flex justify-between">
+      <div className="p-10 sm:p-40 mt-20 flex flex-col sm:flex-row justify-between">
         <div>
-          <h3 className="text-black text-4xl font-bold">
+          <h3 className="text-black text-2xl sm:text-4xl font-bold">
             Frequently
             <br />
             Asked
@@ -78,10 +78,10 @@ export const FAQ = () => {
             <img src={whiteArrow} alt="whiteArrow" className="w-5" />
           </button>
         </div>
-        <div className="w-[60%] p-3">
+        <div className="w-full sm:w-[60%] p-3">
           {faqs.map((que) => (
             <div onClick={() => toggleFaq(que.id)} key={que.id} className="border-b pb-3 mb-5 cursor-pointer">
-              <h3 className="font-semibold text-xl flex items-center justify-between">
+              <h3 className="font-semibold text-lg sm:text-xl flex items-center justify-between">
                 {que.question}
                 {que.isOpen ? <FiMinus size={22} className="cursor-pointer" /> : <GoPlus size={22} className="cursor-pointer" />}
               </h3>

@@ -5,8 +5,8 @@ const SlidingText = () => {
   const loopArr = new Array(100).fill(0);
   return (
     <div className="relative overflow-hidden bg-[#F19AFF] h-24 flex w-full items-center mt-30 -rotate-5">
-      {loopArr.map((_) => (
-        <div className="sliding-text mr-10 text-black font-light text-4xl">
+      {loopArr.map((_, index) => (
+        <div key={index} className="sliding-text mr-10 text-black font-light text-xl sm:text-4xl">
           <span className="flex gap-5 mx-3"> 
                <img src={slideStar} alt="slidestar" />
                consumer first approach
